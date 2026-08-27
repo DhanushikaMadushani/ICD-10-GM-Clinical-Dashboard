@@ -1,9 +1,5 @@
 # 🏥 ICD-10-GM Clinical Intelligence & Inpatient Flow Dashboard
 
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-Data_Analysis_Expressions-blue?style=for-the-badge)
-![Healthcare Analytics](https://img.shields.io/badge/Domain-Healthcare_Analytics-red?style=for-the-badge)
-
 An interactive clinical intelligence solution built in **Power BI Desktop** analyzing **17.9M inpatient hospital admissions** across Germany, based on official public health census data from the **German Federal Statistical Office (Destatis)**.
 
 ---
@@ -16,7 +12,7 @@ An interactive clinical intelligence solution built in **Power BI Desktop** anal
 
 ## 📌 Project Overview & Objectives
 
-* **Source:** German Federal Statistical Office (*Statistisches Bundesamt - Destatis*).
+* **Source:** German Federal Statistical Office (*Statistisches Bundesamt - Destatis*) https://www-genesis.destatis.de/datenbank/online/.
 * **Scope:** 17.9M inpatient hospital census records classified under the official **ICD-10-GM** (German Modification) clinical taxonomy.
 * **Goal:** Ingest unstructured hospital census records, resolve data anomalies (double-counting defects), model dimensional relationships, and engineer an executive-level operational dashboard.
 
@@ -24,7 +20,7 @@ An interactive clinical intelligence solution built in **Power BI Desktop** anal
 
 ## 🔄 Data Pipeline & ETL Workflow
 
-![Raw Data Extract](images/original_dataset.png)
+![Raw Data Extract](Original Data set.png)
 
 * **Data Cleaning (Power Query):**
   * Filtered out pre-calculated `"Insgesamt"` (total) aggregate rows to eliminate a 100%+ double-counting defect.
