@@ -10,7 +10,7 @@ An interactive clinical intelligence solution built in **Power BI Desktop** anal
 
 ## 📊 Dashboard Preview
 
-![ICD-10-GM Dashboard](images/dashboard.png)
+![ICD-10-GM Dashboard](dashboard.png)
 
 ---
 
