@@ -20,7 +20,7 @@ An interactive clinical intelligence solution built in **Power BI Desktop** anal
 
 ## 🔄 Data Pipeline & ETL Workflow
 
-![Raw Data Extract](Original Data set.png)
+![Raw Data Extract](Original Data set.png).
 
 * **Data Cleaning (Power Query):**
   * Filtered out pre-calculated `"Insgesamt"` (total) aggregate rows to eliminate a 100%+ double-counting defect.
