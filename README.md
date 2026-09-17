@@ -42,10 +42,22 @@ An interactive clinical intelligence solution built in **Power BI Desktop** anal
 
 ---
 
+## 💾 Database Architecture & SQL Verification
+
+To ensure data integrity and prevent reporting discrepancies, an upstream **PostgreSQL** layer was built to audit and reproduce the core dashboard KPIs directly against raw data before BI modeling:
+
+* **Baseline Volume Audit:** Validated total inpatient volume (~17.9M admissions) using summary aggregations.
+* **Department Capacity Share:** Calculated clinical department volume distribution (`Innere Medizin` leading at 23.19%) utilizing empty window partitions (`SUM(...) OVER ()`).
+* **Clinical Diagnosis Ranking:** Extracted the Top 10 diagnoses (Cardiovascular diseases #1 at ~2.65M) using a Common Table Expression (CTE) and `DENSE_RANK() OVER (ORDER BY SUM(...) DESC)`.
+* **Demographic Cohort Segmentation:** Isolated geriatric (65+) and pediatric (<18) admission volumes using conditional `CASE WHEN` aggregation.
+* **Query Script:** Available in [`sql/destatis_hospital_analysis.sql`](sql/destatis_hospital_analysis.sql).
+
 ## 🛠️ Technical Stack
 
+* **Database & Querying:** PostgreSQL, pgAdmin 4, SQL (CTEs, Window Functions, DDL)
 * **Business Intelligence:** Microsoft Power BI Desktop
 * **ETL & Data Transformation:** Power Query (M Language)
 * **Calculations & Metrics:** Data Analysis Expressions (DAX)
 * **Data Modeling:** Star-Schema Dimensional Design
+* **Version Control:** Git, GitHub
 
