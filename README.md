@@ -50,7 +50,7 @@ To ensure data integrity and prevent reporting discrepancies, an upstream **Post
 * **Department Capacity Share:** Calculated clinical department volume distribution (`Innere Medizin` leading at 23.19%) utilizing empty window partitions (`SUM(...) OVER ()`).
 * **Clinical Diagnosis Ranking:** Extracted the Top 10 diagnoses (Cardiovascular diseases #1 at ~2.65M) using a Common Table Expression (CTE) and `DENSE_RANK() OVER (ORDER BY SUM(...) DESC)`.
 * **Demographic Cohort Segmentation:** Isolated geriatric (65+) and pediatric (<18) admission volumes using conditional `CASE WHEN` aggregation.
-* **Query Script:** Available in 'destatis_hospital_analysis.sql'.
+* **Query Script:** Available in [`destatis_hospital_analysis.sql`](destatis_hospital_analysis.sql).
 
 ## 🛠️ Technical Stack
 
